@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>String & Math Functions in JS</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        h2 { border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+        ul { list-style-type: square; }
+    </style>
+</head>
+<body>
+    <h2>Given String</h2>
+    <p><b>String:</b> "<span id="str">JavaScript is awesome</span>"</p>
+    <h2>String Object Functions</h2>
+    <ul id="string-results"></ul>
+    <h2>Math Object Functions</h2>
+    <ul id="math-results"></ul>
+    <script>
+        const s = "JavaScript is awesome";
+        const stringTasks = [
+            { desc: "Find length", code: "s.length", res: s.length },
+            { desc: "Convert to uppercase", code: "s.toUpperCase()", res: s.toUpperCase() },
+            { desc: "Convert to lowercase", code: "s.toLowerCase()", res: s.toLowerCase() },
+            { desc: 'Extract substring "script"', code: 's.substring(4, 10)', res: s.substring(4, 10) },
+            { desc: 'Replace "awesome" with "fantastic"', code: 's.replace("awesome", "fantastic")', res: s.replace("awesome", "fantastic") },
+            { desc: 'Concatenate with " and fun!"', code: 's.concat(" and fun!")', res: s.concat(" and fun!") },
+            { desc: 'Index of first "a"', code: "s.indexOf('a')", res: s.indexOf('a') },
+            { desc: 'Index of last "s"', code: "s.lastIndexOf('s')", res: s.lastIndexOf('s') }
+        ];
+        const strList = document.getElementById("string-results");
+        stringTasks.forEach(t => {
+            strList.innerHTML += `<li><b>${t.desc}</b> (<code>${t.code}</code>) &rarr; <i>${t.res}</i></li>`;
+        });
+        const mathTasks = [
+            `Math.round(4.6) &rarr; <b>${Math.round(4.6)}</b>`,
+            `Math.floor(4.9) &rarr; <b>${Math.floor(4.9)}</b>`,
+            `Math.ceil(4.1) &rarr; <b>${Math.ceil(4.1)}</b>`,
+            `Math.sqrt(64) &rarr; <b>${Math.sqrt(64)}</b>`,
+            `Math.pow(2, 3) &rarr; <b>${Math.pow(2, 3)}</b>`,
+            `Math.abs(-5) &rarr; <b>${Math.abs(-5)}</b>`,
+            `Math.max(5, 10, 2) &rarr; <b>${Math.max(5, 10, 2)}</b>`,
+            `Math.min(5, 10, 2) &rarr; <b>${Math.min(5, 10, 2)}</b>`
+        ];
+        const mathList = document.getElementById("math-results");
+        mathTasks.forEach(m => {
+            mathList.innerHTML += `<li>${m}</li>`;
+        });
+    </script>
+</body>
+</html>

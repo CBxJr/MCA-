@@ -1,0 +1,119 @@
+<html>
+    <body>
+       <form id="f1" onsubmit="calculate(); return false;">
+             
+<label>What is the capital of France?</label><br><br>
+<input type="radio" id="q1_1" name="q1" value="Berlin">Berlin<br><br>
+<input type="radio" id="q1_2" name="q1" value="Madrid">Madrid<br><br>
+<input type="radio" id="q1_3" name="q1" value="Paris">Paris<br><br>
+<input type="radio" id="q1_4" name="q1" value="Rome">Rome<br><br>
+
+ 
+<label>Which planet is known as the Red Planet?</label><br><br>
+<input type="radio" id="q2_1" name="q2" value="Venus">Venus<br><br>
+<input type="radio" id="q2_2" name="q2" value="Mars">Mars<br><br>
+<input type="radio" id="q2_3" name="q2" value="Jupiter">Jupiter<br><br>
+<input type="radio" id="q2_4" name="q2" value="Saturn">Saturn<br><br>
+
+ 
+<label>What is the chemical symbol for water?</label><br><br>
+<input type="radio" id="q3_1" name="q3" value="O2">O2<br><br>
+<input type="radio" id="q3_2" name="q3" value="H2O">H2O<br><br>
+<input type="radio" id="q3_3" name="q3" value="CO2">CO2<br><br>
+<input type="radio" id="q3_4" name="q3" value="NaCl">NaCl<br><br>
+
+ 
+<label>Who wrote "Romeo and Juliet"?</label><br><br>
+<input type="radio" id="q4_1" name="q4" value="Charles Dickens">Charles Dickens<br><br>
+<input type="radio" id="q4_2" name="q4" value="William Shakespeare">William Shakespeare<br><br>
+<input type="radio" id="q4_3" name="q4" value="Mark Twain">Mark Twain<br><br>
+<input type="radio" id="q4_4" name="q4" value="Jane Austen">Jane Austen<br><br>
+
+ 
+<label>What is the largest mammal on Earth?</label><br><br>
+<input type="radio" id="q5_1" name="q5" value="African Elephant">African Elephant<br><br>
+<input type="radio" id="q5_2" name="q5" value="Blue Whale">Blue Whale<br><br>
+<input type="radio" id="q5_3" name="q5" value="Giraffe">Giraffe<br><br>
+<input type="radio" id="q5_4" name="q5" value="Great White Shark">Great White Shark<br><br>
+
+ 
+<label>Which language is primarily used for web styling?</label><br><br>
+<input type="radio" id="q6_1" name="q6" value="HTML">HTML<br><br>
+<input type="radio" id="q6_2" name="q6" value="Python">Python<br><br>
+<input type="radio" id="q6_3" name="q6" value="CSS">CSS<br><br>
+<input type="radio" id="q6_4" name="q6" value="SQL">SQL<br><br>
+
+ 
+<label>How many continents are there on Earth?</label><br><br>
+<input type="radio" id="q7_1" name="q7" value="5">5<br><br>
+<input type="radio" id="q7_2" name="q7" value="6">6<br><br>
+<input type="radio" id="q7_3" name="q7" value="7">7<br><br>
+<input type="radio" id="q7_4" name="q7" value="8">8<br><br>
+
+ 
+<label>What is the boiling point of water in Celsius?</label><br><br>
+<input type="radio" id="q8_1" name="q8" value="90">90°C<br><br>
+<input type="radio" id="q8_2" name="q8" value="100">100°C<br><br>
+<input type="radio" id="q8_3" name="q8" value="120">120°C<br><br>
+<input type="radio" id="q8_4" name="q8" value="212">212°C<br><br>
+
+ 
+<label>Which gas do plants absorb from the atmosphere?</label><br><br>
+<input type="radio" id="q9_1" name="q9" value="Oxygen">Oxygen<br><br>
+<input type="radio" id="q9_2" name="q9" value="Nitrogen">Nitrogen<br><br>
+<input type="radio" id="q9_3" name="q9" value="Carbon Dioxide">Carbon Dioxide<br><br>
+<input type="radio" id="q9_4" name="q9" value="Hydrogen">Hydrogen<br><br>
+
+ 
+<label>What is the powerhouse of the cell?</label><br><br>
+<input type="radio" id="q10_1" name="q10" value="Nucleus">Nucleus<br><br>
+<input type="radio" id="q10_2" name="q10" value="Ribosome">Ribosome<br><br>
+<input type="radio" id="q10_3" name="q10" value="Mitochondria">Mitochondria<br><br>
+<input type="radio" id="q10_4" name="q10" value="Endoplasmic Reticulum">Endoplasmic Reticulum<br><br>
+
+            <input type ="submit"></input> 
+</form>
+        <script src="11.js">
+
+        </script>
+    </body>
+</html>
+
+11.js
+function calculate() {
+    let form1 = document.getElementById("f1");
+    let score = 0; 
+
+    if (form1.q1.value == "Paris")
+        score++;
+
+    if (form1.q2.value == "Mars")
+        score++;
+
+    if (form1.q3.value == "H2O")
+        score++;
+
+    if (form1.q4.value == "William Shakespeare")
+        score++;
+
+    if (form1.q5.value == "Blue Whale")
+        score++;
+
+    if (form1.q6.value == "CSS")
+        score++;
+
+    if (form1.q7.value == "7")
+        score++;
+
+    if (form1.q8.value == "100")
+        score++;
+
+    if (form1.q9.value == "Carbon Dioxide")
+        score++;
+
+    if (form1.q10.value == "Mitochondria")
+        score++;
+
+    alert("congrats you have scored " + score);
+    form1.reset();
+}
